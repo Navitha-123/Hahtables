@@ -10,7 +10,7 @@ namespace HashTable
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("choose option 1.Add to create mymapnode");
+            Console.WriteLine("choose option 1.Add to create mymapnode \t 2.Ability to find frequency of words in a large paragraph ");
             int option = Convert.ToInt32(Console.ReadLine());
             switch(option)
             {
@@ -28,6 +28,36 @@ namespace HashTable
                     string value = hashtable.GetV(key);
                     Console.WriteLine("{0} index valiue :{1}",key,value);
                     break;
+                case 2:
+                    UC2MyMapNode<string, string> hashtable1 = new UC2MyMapNode<string, string>(18);
+                    hashtable1.Add("0", "Paranoids");
+                    hashtable1.Add("1", "are");
+                    hashtable1.Add("2", "not");
+                    hashtable1.Add("3", "paranoid");
+                    hashtable1.Add("4", "because");
+                    hashtable1.Add("5", "they");
+                    hashtable1.Add("6", "are");
+                    hashtable1.Add("7", "paranoid");
+                    hashtable1.Add("8", "but");
+                    hashtable1.Add("9", "because");
+                    hashtable1.Add("10", "they");
+                    hashtable1.Add("11", "keep");
+                    hashtable1.Add("12", "putting");
+                    hashtable1.Add("13", "themselves");
+                    hashtable1.Add("14", "deliberately");
+                    hashtable1.Add("15", "into");
+                    hashtable1.Add("16", "paranoid");
+                    hashtable1.Add("17", "avoidable");
+                    hashtable1.Add("18", "situations");
+
+                    Console.WriteLine("enter the key to search the value :");
+                    string Key = Console.ReadLine();
+                    string Value = hashtable1.GetV(Key);
+                    Console.WriteLine("{0} index value :{1}", Key, Value);
+                    break;
+
+
+
                 default:
                     Console.WriteLine("enter wrong choice");
                     break;

@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace HashTable
 {
-   public class UC1MyMapNode<K, V>
+    public class UC2MyMapNode<K, V>
     {
         private int size;
         private LinkedList<KeyValue<K, V>>[] items;
 
-        public UC1MyMapNode(int size)
+        public UC2MyMapNode(int size)
         {
             this.size = size;
             this.items = new LinkedList<KeyValue<K, V>>[size];
@@ -58,8 +59,21 @@ namespace HashTable
             public v Value { get; set; }
         }
 
+        public bool IsEmpty()
+        {
+            if (GetSize() <= 0)
+                return true;
+            else
+                return false;
+        }
+        public int GetSize()
+        {
+            return size;
+        }
     }
 
-
 }
+
+
+
 
