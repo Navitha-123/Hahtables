@@ -65,7 +65,7 @@ namespace HashTable
                     Console.WriteLine("{0} index value :{1}", Key, Value);
                     break;
                 case 3:
-                    UC3MyMapNode<string, string> hashtable2 = new UC3MyMapNode<string, string>(18);
+                    UC3MyMapNodeRemove<string, string> hashtable2 = new UC3MyMapNodeRemove<string, string>(18);
                     hashtable2.Add("0", "Paranoids");
                     hashtable2.Add("1", "are");
                     hashtable2.Add("2", "not");
